@@ -1,0 +1,16 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteBase /
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L] #  "L"   - tells Apache not to process any more rules if this one is used
+                                            #  "$1"  - in the substitution tells Apache to put whatever matched
+                                                        #the earlier bracketed pattern into the URL at this point.
+                                            #  "QSA" - append query string from request to substituted URL
+

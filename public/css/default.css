@@ -1,0 +1,433 @@
+@media screen and (min-width : 980px) {
+}
+
+html{
+    background-color: #000000;
+    color: white;
+}
+.body {
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    height:128px;
+    background-color: #000000;
+    z-index: 1000;
+}
+.header_content{
+    width: 665px;
+    height: 106px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.logo {
+    position: relative;
+    display: inline-block;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+    color: #ccb8b3;
+    width: 196px;
+    height: 84px;
+    background-image: linear-gradient(#4e1100, #7b1800);
+    vertical-align: top;
+
+}
+.logo_contact_manager{
+    transform:scale(0.9,1.0);
+    letter-spacing: 5px;
+    line-height: 13px;
+    margin-top: -5px;
+}
+div[class="home_button"],div[class="authorization_button"],
+div[class="register_button"],div[class="logout_button"],
+div[class="add_button"],div[class="event_button"],
+div[class="action_buttons"]{
+    overflow: hidden;
+    margin-left: 2%;
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    background-image: linear-gradient(#545454, #0b0b0b);
+    border-radius: 15px;
+    min-width: 90px;
+}
+
+.authorization_button{
+    width: 110px;
+}
+
+
+.header_buttons{
+    font-size: 11px;
+    float: right;
+    display: inline-block;
+    margin-top: 60px;
+    width: 375px;
+}
+div[class="header_buttons"]>div>img{
+    padding-right: 8px;
+    margin-left: -8px;
+}
+div[class="header_buttons"]>div>img[src$="key.png"],
+div[class="header_buttons"]>div>img[src$="users.png"] {
+    vertical-align: -10%;
+}
+
+
+
+.footer{
+    font-size: 11px;
+    text-align: center;
+    padding: 40px;
+}
+
+
+
+
+.content{
+    padding: 10px;
+    height: 90%;
+    margin-top: 125px;
+    background: #000000;
+}
+
+a:link, a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+table {
+    table-layout: fixed;
+    text-align: left;
+    width: 712px;
+    min-width: 712px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+th{
+    font-size: 11px;
+    height: 33px;
+    min-height: 33px;
+    width: 712px;
+    font-weight: normal;
+    color: #bbbbbb;
+    background-color: #414141;
+    border-bottom: none;
+}
+th>a:link, th>a:visited{
+    color: #bbbbbb;
+}
+.sort{
+    background: none;
+    border: none;
+    color: #bbbbbb;
+    font-size: 11px;
+    margin-left: -6px;
+}
+th:first-child{
+    width: 55px;
+    text-align: center;
+    border-top-left-radius: 25px;
+}
+th:nth-child(2){
+    width: 130px;
+}
+th:nth-child(3){
+    width: 138px;
+}
+th:nth-child(4){
+    width: 178px;
+}
+th:nth-child(5){
+    width: 116px;
+}
+th:nth-child(6){
+    width: 82px;
+}
+th:last-child{
+    border-top-right-radius: 25px;
+}
+
+
+
+
+tr{
+    height: 28px;
+}
+
+tr:nth-child(2) td{
+    height: 40px;
+    border-top:none;
+}
+tr:nth-child(2) span{
+    vertical-align: -12px;
+}
+tr:nth-child(2) div div{
+    margin-top: 12px;
+}
+tr:last-child td{
+    height: 72px;
+    border-top: none;
+    background-image: linear-gradient(#303030, #191919);
+}
+tr:last-child>td:first-child{
+    border-bottom-left-radius: 25px;
+}
+tr:last-child>td:last-child {
+    border-bottom-right-radius: 25px;
+}
+
+
+
+
+td{
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #303030;
+    border-top: 1px solid #515151;
+    border-collapse: collapse;
+    width: 400px;
+    color: white;
+}
+td:first-child{
+    text-align: center;
+    font-weight: normal;
+}
+td>span>input[type="checkbox"]{
+    vertical-align: -4px;
+}
+
+
+
+
+div[class="edit_button"],div[class="view_button"],div[class="delete_button"]{
+    font-weight: normal;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    display: inline-block;
+}
+.edit_button{
+    width: 34px;
+    background-image: linear-gradient(#c37102, #8e4506);
+    border-radius: 10px;
+    float: left;
+}
+.view_button{
+    width: 43px;
+    background-image: linear-gradient(#c37102, #8e4506);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    float: right;
+}
+div.delete_button{
+    display: none;
+}
+tr:hover .delete_button{
+    display: inline;
+    float: right;
+    background-color: #7b1800;
+    width: 30px;
+    height: 18px;
+    font-size: 12px;
+    margin-right: -73px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+
+
+
+#pagination_id{
+    display:block;
+    font-size: 11px;
+    font-weight: bold;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-image: linear-gradient(#651500, #7b1800);
+    text-align: center;
+    color: white;
+    width: 489px;
+    height: 37px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pagination_button_previous{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    border-right: 1px solid #000000;
+    margin-top: 4.5px;
+    color: #ffffff;
+}
+.pagination_button_123{
+    display: inline-block;
+    margin-top: 4.5px;
+    width: 200px;
+    color: #b3b3b3;
+}
+.pagination_button_next{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    border-left: 1px solid #000000;
+    margin-top: 4.5px;
+    color: #ffffff;
+}
+
+div[class^="pagination_button"]>input{
+    margin-top: 7px;
+    font-weight: bold;
+    color: #ffffff;
+}
+div[class="pagination_button_123"]>input,.pagination_button_123>a:link, .pagination_button_123>a:visited{
+    color: #b3b3b3;
+}
+
+.pagination_button_previous>a, .pagination_button_123>a, .pagination_button_next>a{
+   line-height: 25px;
+}
+div[class="pagination_button_123"] span{
+    color: #ffffff;
+}
+
+.page{
+    background: none;
+    border: none;
+    color: #ffffff;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.add_view_edit_form {
+    position: static;
+    color: #afafaf;
+    background-image: linear-gradient(#000000,#171717,#000000);
+    width: 427px;
+    height: 631px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_register{
+    border-radius: 20px;
+    position: static;
+    color: #afafaf;
+    width: 427px;
+    height: 262px;
+    background-image: linear-gradient(#060606,#191919,#060606);
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_register_title{
+    font-size: 16px;
+}
+
+.form_container{
+    position: absolute;
+    font-size: 11px;
+    line-height: 22px;
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 340px;
+}
+div>input[type="radio"]{
+    position: absolute;
+    right: 80%;
+}
+div>input[type="text"]{
+    float: right;
+    flex-direction: column;
+    width: 241px;
+    height: 22px;
+}
+input[type="submit"]{
+    background:none;
+    border:none;
+    font-size:1em;
+    color: #ffffff;
+}
+.pagination_button_123 input[type="submit"]{
+    width: 5px;
+    padding-left: 0px;
+}
+
+.form_container input[type="submit"]{
+    margin-left: 35%;
+    width: 95px;
+    height: 23px;
+}
+img[src$="arrow_done.png"]{
+    position: absolute;
+    margin-top: 9px;
+    margin-left: 135px;
+}
+
+
+
+
+form>div[class="register_div"]{
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+form>div[class="login_div"]{
+    margin-top: -15px;
+    margin-bottom: 52px;
+
+}
+.Register{
+    margin-top: -33px;
+}
+
+form>div[class="login_links"]>a{
+    text-decoration: underline;
+    margin-left: 96px;
+}
+form>div[class="login_links"]{
+   margin-top: -50px;
+}
+form>div>span{
+    text-align: center;
+    margin-left: 150px;
+}
+
+
+
+div>form>input[type="submit"]{
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    background-image: linear-gradient(#545454, #0b0b0b);
+    border-radius: 10px;
+}
