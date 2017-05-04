@@ -43,10 +43,26 @@ html{
 
 }
 .logo_contact_manager{
-    transform:scale(0.9,1.0);
     letter-spacing: 5px;
     line-height: 13px;
-    margin-top: -5px;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.flip_logo_contact_manager{
+    letter-spacing: 5px;
+    line-height: 13px;
+    color: #ffffff;
+    margin-top: -12px;
+    -moz-transform: scale(1, -1);
+    -webkit-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 div[class="home_button"],div[class="authorization_button"],
 div[class="register_button"],div[class="logout_button"],
@@ -307,7 +323,7 @@ div[class="pagination_button_123"]>input,.pagination_button_123>a:link, .paginat
 }
 
 .pagination_button_previous>a, .pagination_button_123>a, .pagination_button_next>a{
-   line-height: 25px;
+    line-height: 25px;
 }
 div[class="pagination_button_123"] span{
     color: #ffffff;
@@ -414,7 +430,7 @@ form>div[class="login_links"]>a{
     margin-left: 96px;
 }
 form>div[class="login_links"]{
-   margin-top: -50px;
+    margin-top: -50px;
 }
 form>div>span{
     text-align: center;

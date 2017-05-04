@@ -18,7 +18,10 @@
 <body class="body" id="body">
 <div class="header">
     <div class="header_content">
-        <div class="logo"><h5 class="logo_contact_manager">Contact Manager</h5></div>
+        <div class="logo">
+            <h5 class="logo_contact_manager">Contact Manager</h5>
+            <h6 class="flip_logo_contact_manager">Contact Manager</h6>
+        </div>
         <div class="header_buttons">
             <div class="row">
                 <?= $this->header_buttons?>

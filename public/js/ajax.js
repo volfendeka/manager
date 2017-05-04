@@ -4,6 +4,7 @@ var pageWidget = {
     page: 1,
     sort_first: "ASC",
     sort_last: "ASC",
+    url: 'http://manager.loc/',
     method_name: document.URL.split("/")[4],
     tableJsonAjaxMethod: "jsonAjaxTableData",
     validationJsonAjaxMethod: "authorizationStatus",
@@ -15,7 +16,7 @@ var pageWidget = {
     },
     
     getPage: function () {
-        var url = "http://mvc.loc/Contacts/"+ pageWidget.tableJsonAjaxMethod +"/"+ pageWidget.sort_last +"/"+ pageWidget.sort_first +"/"+ pageWidget.page +"/";
+        var url = pageWidget.url + "Contacts/"+ pageWidget.tableJsonAjaxMethod +"/"+ pageWidget.sort_last +"/"+ pageWidget.sort_first +"/"+ pageWidget.page +"/";
         if(document.getElementById("index_table")) {
             pageWidget.tableId = "index_table";
             pageWidget.columns = ["number","last_name", "first_name", "email", "cell_phone", "actions"];
@@ -29,7 +30,7 @@ var pageWidget = {
 
     getAuthorized: function (post_params, action) {
         post_params += "&action="+action;
-        var url = "http://mvc.loc/Users/"+ pageWidget.validationJsonAjaxMethod +"/";
+        var url = pageWidget.url + "Users/"+ pageWidget.validationJsonAjaxMethod +"/";
         ajaxLoader.loadDoc(url, pageWidget.getServerValidationStatus, "POST", post_params);
     },
 
@@ -157,7 +158,7 @@ var pageWidget = {
 
     checkForNewEmails: function () {
         var text_field = document.getElementById("send_field").value.split(",");
-        //ajaxLoader.loadDoc("http://mvc.loc/Contacts/jsonAjax/ASC/ASC/1/", pageWidget.transferJsonData, "GET");
+        //ajaxLoader.loadDoc(pageWidget.url + "Contacts/jsonAjax/ASC/ASC/1/", pageWidget.transferJsonData, "GET");
         console.log(text_field);
     },
     
@@ -200,7 +201,7 @@ var pageWidget = {
                         case "actions":
                             var action_link =[];
                             for(var a=0; a < actions.length; a++){
-                                action_link[a] = "http://mvc.loc/Contacts/"+actions[a]+"Contact/"+data['id']+"/";
+                                action_link[a] = pageWidget.url + "Contacts/"+actions[a]+"Contact/"+data['id']+"/";
                             }
                             table_data.innerHTML = '<a href="'+action_link[0]+'"><div class="edit_button">edit</div></a>'+
                                                    '<a href="'+action_link[1]+'"><div class="view_button">view</div></a>'+
@@ -220,7 +221,7 @@ var pageWidget = {
             fields_to_validate = document.getElementsByTagName("input");
         console.log(response);
         if(!response){
-            var url = "http://mvc.loc/Contacts/showContacts/"+ pageWidget.sort_last +"/"+ pageWidget.sort_first +"/"+ pageWidget.page +"/";
+            var url = pageWidget.url + "Contacts/showContacts/"+ pageWidget.sort_last +"/"+ pageWidget.sort_first +"/"+ pageWidget.page +"/";
             ajaxLoader.loadDoc(url, ajaxLoader.executeDoc, "GET");
         }else {
             for (var i = 0, field; field = fields_to_validate[i]; i++) {
