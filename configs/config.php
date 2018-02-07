@@ -16,6 +16,9 @@ define(SORT_TABLE_FIRST, 'first_name');
 define(SORTING_PARAM_LAST, 'ASC');
 define(SORTING_PARAM_FIRST, 'ASC');
 define(PER_PAGE, 5);
+define(DEFAULT_CONTROLLER, 'ContactsController');
+define(DEFAULT_METHOD, 'showContacts');
+define(PER_PAGE, 5);
 define(URL,  "http://manager.loc/");
 
 error_reporting(E_ALL); // Sets which PHP errors are reported

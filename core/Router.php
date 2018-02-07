@@ -20,9 +20,9 @@ class Router extends InputClear{
 
 
     public function loadController($controllerData){
-        $controllerName = $controllerData[0]."Controller";
+        $controllerName = !empty($controllerData[0])?$controllerData[0]."Controller":DEFAULT_CONTROLLER;
         $controllerTitle  = "contact\\controllers\\".$controllerName;
-        $controllerMethod = $controllerData[1];
+        $controllerMethod = isset($controllerData[1])?$controllerData[1]:DEFAULT_METHOD;
         unset ($controllerData[0]);
         unset ($controllerData[1]);
 

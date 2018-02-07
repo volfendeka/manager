@@ -26,14 +26,9 @@ class ContactsController extends Controller{
         }
     }
 
-    public function showContacts($sort_last, $sort_first, $pagination){
-        //if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ) {
-           // $this->view->data = $this->model->showContactsModel($sort_last, $sort_first, $pagination);
-            //echo json_encode($this->view->data);
-        //}else{
-            $this->view->data = $this->model->showContactsModel($sort_last, $sort_first, $pagination);
-            $this->view->render("show");
-        //}
+    public function showContacts($sort_last = SORTING_PARAM_LAST , $sort_first = SORTING_PARAM_FIRST, $pagination = 1){
+        $this->view->data = $this->model->showContactsModel($sort_last, $sort_first, $pagination);
+        $this->view->render("show");
     }
     
     public function addContact(){
